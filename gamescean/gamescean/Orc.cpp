@@ -5,6 +5,7 @@ Orc::Orc(const std::string& n, const int hp, const int atk)
 {
 
 }
+//왜안되냐
 Orc::~Orc()
 {
 }
