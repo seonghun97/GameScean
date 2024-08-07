@@ -19,8 +19,9 @@ void Orc::TakeDamage(int damage)
 	hp -= damage;
 	std::cout << damage << "의 데미지를받았다. " << "남은체력 :" << hp << std::endl;
 }
-void Orc::Attack(int atk)
-{
-	atk = rand() % 50 + 200;
-	std::cout << "몬스터" << name << "의 공격 " << atk << std::endl;
+void Orc::Attack(Character* target) {
+	int damage = 100 + (rand() % (150 - 100 + 1));
+	std::cout << name << "이(가) 공격합니다! 데미지: " << damage << std::endl<<std::endl;
+	target->TakeDamage(damage);
+	std::cout << std::endl;
 }

@@ -16,10 +16,12 @@ void Slime::CharacterInfor() const
 void Slime::TakeDamage(int damage)
 {
 	hp -= damage;
-	std::cout << damage << "의 데미지를받았다. " << "남은체력 :" << hp << std::endl;
+	std::cout << damage << "의 데미지를주었다. " << "남은체력 :" << hp << std::endl << std::endl << std::endl;
+	
 }
-void Slime::Attack(int atk)
-{
-	atk = rand() % 50 + 100;
-	std::cout << "몬스터" << name << "의 공격 " << atk << std::endl;
+void Slime::Attack(Character* target) {
+	int damage = 50 + (rand() % (100 - 50 + 1));
+	std::cout << name << "이(가) 공격합니다! 데미지: " << damage << std::endl;
+	target->TakeDamage(damage);
+	std::cout << std::endl;
 }

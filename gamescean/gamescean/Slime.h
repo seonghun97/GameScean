@@ -9,5 +9,5 @@ public:
 
 	void CharacterInfor()const override;
 	void TakeDamage(int damage) override;
-	void Attack(int atk) override;
+	void Attack(Character* target) override;
 };

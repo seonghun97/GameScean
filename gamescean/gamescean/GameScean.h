@@ -11,8 +11,8 @@ public:
 	void CreateUnit();
 	void PrintInfo();
 	void Fight(int choice);
-	/*void Dead(int hp);*/
 	void ChoiceMonster();
+	void Battle(class Character* monster);
 protected:
 	class Character* PPlayer = nullptr;
 	class Character* MSlime = nullptr;

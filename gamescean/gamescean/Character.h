@@ -1,5 +1,6 @@
 #pragma once
 #include<iostream>
+#include<time.h>
 class Character
 {
 protected:
@@ -14,9 +15,13 @@ public:
 	{
 		return hp;
 	}
+	std::string GetName() const {
+		return name;
+	}
+
 
 	virtual void CharacterInfor() const = 0;
 	virtual void TakeDamage(int damage) = 0;
-	virtual void Attack(int atk) = 0;
+	virtual void Attack(Character* target) = 0;
 };
 

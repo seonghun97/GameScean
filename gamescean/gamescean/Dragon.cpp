@@ -19,8 +19,10 @@ void Dragon::TakeDamage(int damage)
 	hp -= damage;
 	std::cout << damage << "의 데미지를받았다. " << "남은체력 :" << hp << std::endl;
 }
-void Dragon::Attack(int atk)
+void Dragon::Attack(Character* target)
 {
-	atk = rand() % 100 + 300;
-	std::cout << "몬스터" << name << "의 공격 " << atk << std::endl;
+	int damage = 150 + (rand() % (200 - 150 + 1));
+	std::cout << name << "이(가) 공격합니다! 데미지: " << damage << std::endl  <<std::endl;
+	target->TakeDamage(damage);
+	std::cout << std::endl;
 }
