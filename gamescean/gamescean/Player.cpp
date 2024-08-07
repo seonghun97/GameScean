@@ -22,7 +22,7 @@ void Player::TakeDamage(int damage)
 }
 void Player::Attack(Character* target)
 {
-	int damage = 100 + (rand() % (300 - 100 + 1));
+	int damage = rand() % 201 + 100;
 	std::cout << name << "이(가) 공격합니다! 데미지: " << damage << std::endl;
 	target->TakeDamage(damage);
 }

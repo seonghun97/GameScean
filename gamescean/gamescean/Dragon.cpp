@@ -21,7 +21,7 @@ void Dragon::TakeDamage(int damage)
 }
 void Dragon::Attack(Character* target)
 {
-	int damage = 150 + (rand() % (200 - 150 + 1));
+	int damage = rand() % 51 + 150;
 	std::cout << name << "이(가) 공격합니다! 데미지: " << damage << std::endl  <<std::endl;
 	target->TakeDamage(damage);
 	std::cout << std::endl;

@@ -20,7 +20,7 @@ void Slime::TakeDamage(int damage)
 	
 }
 void Slime::Attack(Character* target) {
-	int damage = 50 + (rand() % (100 - 50 + 1));
+	int damage = rand() % 50 + 50;
 	std::cout << name << "이(가) 공격합니다! 데미지: " << damage << std::endl;
 	target->TakeDamage(damage);
 	std::cout << std::endl;
