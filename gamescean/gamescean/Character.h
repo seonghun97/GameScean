@@ -15,7 +15,8 @@ public:
 	{
 		return hp;
 	}
-	std::string GetName() const {
+	std::string GetName() const
+	{
 		return name;
 	}
 

@@ -87,28 +87,33 @@ void GameScean::Fight(int choice)
 
 
 
-void GameScean::ChoiceMonster() {
+void GameScean::ChoiceMonster()
+{
 	std::cout << "상대할 적을 골라주세요" << std::endl;
 	std::cout << "1. 슬라임   2. 오크    3. 드래곤" << std::endl;
 	int Num;
 	std::cin >> Num;
 
-	if (Num == 1) {
+	if (Num == 1) 
+	{
 		std::cout << "슬라임 " << std::endl;
 		MSlime->CharacterInfor();
 		Battle(MSlime);
 	}
-	else if (Num == 2) {
+	else if (Num == 2) 
+	{
 		std::cout << "오크" << std::endl;
 		MOrc->CharacterInfor();
 		Battle(MOrc);
 	}
-	else if (Num == 3) {
+	else if (Num == 3)
+	{
 		std::cout << "드래곤" << std::endl;
 		MDragon->CharacterInfor();
 		Battle(MDragon);
 	}
-	else {
+	else
+	{
 		std::cout << "1~3만 골라라 " << std::endl;
 		return ChoiceMonster();
 	}

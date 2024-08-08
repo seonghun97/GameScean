@@ -11,7 +11,7 @@ Player::~Player()
 }
 void Player::CharacterInfor() const
 {
-	std::cout << "이름 : " << name << "\t" << "체력 : " << hp << "\t " << "공격력 : 100~500"  << "\t " << std::endl <<std::endl;
+	std::cout << "이름 : " << name << "\t" << "체력 : " << hp << "\t " << "공격력 : 100~300"  << "\t " << std::endl <<std::endl;
 
 }
 void Player::TakeDamage(int damage)
@@ -22,7 +22,7 @@ void Player::TakeDamage(int damage)
 }
 void Player::Attack(Character* target)
 {
-	int damage = rand() % 201 + 100;
+	int damage = rand() % 200 + 100;
 	std::cout << name << "이(가) 공격합니다! 데미지: " << damage << std::endl;
 	target->TakeDamage(damage);
 }
